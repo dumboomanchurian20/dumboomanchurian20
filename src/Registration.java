@@ -243,12 +243,34 @@ public class Registration extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-          menu m=new menu();
-          m.setVisible(true);
-          m.pack();
-          m.setLocationRelativeTo(null);
-          m.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-          this.setVisible(false);
+        String fname=txtFname.getText();
+        String lname=txtLname.getText();
+        String add=txtAdd.getText();
+        String email=txtEmail.getText();
+        String pass=txtPass.getText();
+        String query="INSERT INTO `test`.`detail` (`fname`, `lname`, `add`, `email`, `pass`) VALUES ('?', '?', '?', '?', '?')";
+        try{
+            con= DriverManager.getConnection("jdbc:mysql://localhost/test","root","");
+
+            pst=con.prepareStatement(query);
+            pst.setString(1, fname);
+            pst.setString(2, lname);
+            pst.setString(3, add);
+            pst.setString(4, email);
+            pst.setString(5, pass);
+            pst.executeUpdate();
+            if(pst.executeUpdate()>0){
+
+                message me=new message();
+                me.setVisible(true);
+            }
+        }
+        catch(Exception ex){
+
+            JOptionPane.showMessageDialog(null,ex);
+
+        }
+
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
