@@ -22,7 +22,7 @@ public class home extends javax.swing.JFrame {
      */
     public home() {
         initComponents();
-        this.setLocationRelativeTo(null);
+        //this.setLocationRelativeTo(null);
     }
 
     /**
@@ -52,6 +52,7 @@ public class home extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 51));
@@ -208,10 +209,10 @@ public class home extends javax.swing.JFrame {
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
         Registration rgn=new Registration();
         rgn.setVisible(true);
-        rgn.pack();
-        rgn.setLocationRelativeTo(null);
-        rgn.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setVisible(false);
+        //rgn.pack();
+       // rgn.setLocationRelativeTo(null);
+        //rgn.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //this.setVisible(false);
        
     }//GEN-LAST:event_jLabel7MouseClicked
 
@@ -221,16 +222,16 @@ public class home extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel7KeyPressed
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
-            this.setState(JFrame.ICONIFIED);
+            //this.setState(JFrame.ICONIFIED);
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
           menu m=new menu();
           m.setVisible(true);
-          m.pack();
-          m.setLocationRelativeTo(null);
-          m.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-          this.setVisible(false);
+         // m.pack();
+          //m.setLocationRelativeTo(null);
+          //m.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+          //this.setVisible(false);
     }//GEN-LAST:event_jButton1MouseClicked
 
     /**
